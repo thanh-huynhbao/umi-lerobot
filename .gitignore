@@ -8,3 +8,15 @@ wheels/
 
 # Virtual environments
 .venv
+
+# dataset
+tum/
+insv/
+insv-dataset/
+
+# deps
+submodules/
+
+# build
+slam/build/
+slam/Vocabulary/
