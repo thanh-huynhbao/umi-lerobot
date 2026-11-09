@@ -1,0 +1,71 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "KannalaBrandt8"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera1.fx: 190.978477
+Camera1.fy: 190.973307
+Camera1.cx: 254.931706
+Camera1.cy: 256.897442
+
+# Equidistant distortion 0.0034823894022493434, 0.0007150348452162257, -0.0020532361418706202, 0.00020293673591811182
+#Camera.bFishEye: 1
+Camera1.k1: 0.003482389402
+Camera1.k2: 0.000715034845
+Camera1.k3: -0.002053236141
+Camera1.k4: 0.000202936736
+    
+# Camera resolution
+Camera.width: 512
+Camera.height: 512
+
+# Camera frames per second 
+Camera.fps: 30
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Read by umi_mvp.orbslam3, ignored by ORB-SLAM3.
+Camera.timeshiftCamImuNs: -4093538
+
+# T_b_c1: camera -> IMU body; inverse of Kalibr T_cam_imu.
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.006663302710621, 0.000391038652360, -0.999977723494759, -0.010037854897617,
+           0.029310936750451, -0.999570170306518, -0.000586191274929, -0.010754745124486,
+          -0.999548132599826, -0.029314189775126, 0.006648976916053, -0.011262027137093,
+           0.0, 0.0, 0.0, 1.0]
+
+IMU.InsertKFsWhenLost: 1
+
+# Measured stationary noise (continuous-time densities).
+IMU.NoiseGyro: 6.289281055894953e-05
+IMU.NoiseAcc: 0.00047223533277946305
+IMU.GyroWalk: 3.6495904877171105e-06
+IMU.AccWalk: 4.398351678328365e-05
+# X3 1000 Hz IMU block-averaged by 5 (~199.3 Hz).
+IMU.Frequency: 200.0
+
+ORBextractor.nFeatures: 3000
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 12
+ORBextractor.minThFAST: 5
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0

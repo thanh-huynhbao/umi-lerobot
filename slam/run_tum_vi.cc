@@ -73,6 +73,15 @@ int main(int argc, char **argv)
         cerr << "ERROR: No IMU measurements found at: " << pathImuCsv << endl;
         return 1;
     }
+    cout << endl << "=================== TIMESTAMP DIAGNOSTIC ===================" << endl;
+    cout << "First Camera Frame TS: " << vTimestampsCam.front() << " s (" 
+         << (long long)(vTimestampsCam.front() * 1e9) << " ns)" << endl;
+    cout << "Last  Camera Frame TS: " << vTimestampsCam.back() << " s (" 
+         << (long long)(vTimestampsCam.back() * 1e9) << " ns)" << endl;
+    cout << "First IMU Sample   TS: " << vImuMeas.front().t << " s (" 
+         << (long long)(vImuMeas.front().t * 1e9) << " ns)" << endl;
+    cout << "Last  IMU Sample   TS: " << vImuMeas.back().t << " s (" 
+         << (long long)(vImuMeas.back().t * 1e9) << " ns)" << endl;
 
     // 3. Khởi tạo hệ thống SLAM với chế độ IMU_MONOCULAR
     // bUseViewer = false để chạy ổn định qua headless/SSH

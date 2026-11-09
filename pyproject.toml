@@ -9,6 +9,7 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "opencv-python>=5.0.0.93",
+    "pandas>=3.1.1",
     "rerun-sdk>=0.42.0",
     "setuptools>=84.2.1",
 ]
@@ -19,3 +20,9 @@ umi-lerobot = "umi_lerobot:main"
 [build-system]
 requires = ["uv_build>=0.13.7,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "maturin>=1.16.0",
+    "wheel>=0.48.0",
+]
