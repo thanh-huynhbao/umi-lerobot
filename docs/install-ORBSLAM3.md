@@ -170,7 +170,6 @@ cmake_minimum_required(VERSION 3.5)
 So now, you can feel comfortable to start running build. After the build is success, `lib/libORB_SLAM3.so` would appear.
 
 ## 4. References
-
 [^1]: UZ-SLAMLab *(access: 2026)*, **ORBSLAM3**. github: https://github.com/UZ-SLAMLab/ORB_SLAM3/tree/master.
 
-[^2]: stevenlovegrove *(access: 2026)*, **Pangolin**. github: https://github.com/stevenlovegrove/Pangolin
+[^2]: stevenlovegrove *(access: 2026)*, **Pangolin**. github: https://github.com/stevenlovegrove/Pangolin.
