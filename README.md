@@ -13,12 +13,24 @@ ORBSLAM3: [Install ORBSLAM3](/docs/install-ORBSLAM3.md)
 ## LeRobot Dataset 
 
 ## Quick Start
-
-If you already having tum dataset. At the main folder, you can run the command below to have a fresh start.
+At the begin, please run the following prompt for installing the python environment
 ```bash
+uv venv # create virtual environment
+uv sync # installing dependencies following `pyproject.toml`
+```
+If you already having `tum dataset`. At the main folder, you can run the command below to have a fresh start.
+```bash
+./slam/run_tum slam/Vocabulary/ORBvoc.txt slam/config/TUM-V.yaml tum/dataset-corridor4_512_16/ tum/dataset-corridor4_512_16/mav0/cam0/data.csv
+```
+```bash
+# This is just an explaination
 ./slam/run_tum \                          # main execute file
     slam/Vocabulary/ORBvoc.txt \          # Vocabulary file
     slam/config/TUM-V.yaml \              # camera config in yaml
     tum/dataset-corridor4_512_16/ \       # dataset folder 
     tum/dataset-corridor4_512_16/mav0/cam0/data.csv # list of frames
+```
+Or inside computer terminal, you can run python file as an alternative
+```bash
+uv python utils/dry-run.py
 ```
